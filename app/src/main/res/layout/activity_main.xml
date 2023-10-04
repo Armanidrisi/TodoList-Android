@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myPrimary"
+    android:orientation="vertical"
+>
+
+    <RelativeLayout
+		android:id="@+id/custom_appbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/myPrimary"
+		android:layout_marginTop="20dp"
+	>
+
+		<ImageView
+			android:id="@+id/menu_icon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_menu"
+			android:layout_alignParentStart="true"
+			android:layout_centerVertical="true"
+			android:layout_marginStart="16dp"/>
+
+		<ImageView
+			android:id="@+id/user_icon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_account"
+			android:layout_alignParentEnd="true"
+			android:layout_centerVertical="true"
+			android:layout_marginEnd="16dp"/>
+
+	</RelativeLayout>
+
+	<LinearLayout 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="35dp"
+		android:padding="11dp"
+		android:orientation="vertical"
+	>
+		<EditText
+			
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Search"
+			android:background="@drawable/rounded_bg"
+			android:drawableStart="@drawable/ic_search"
+			android:maxLines="1"
+			android:layout_margin="11dp"
+			android:padding="11dp"
+		/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="All ToDos"
+			android:textColor="#000000"
+			android:textSize="40sp"
+			android:textStyle="bold"
+			android:layout_margin="20dp"
+		/>
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/recycler"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+			
+		
+	</LinearLayout>
+	<LinearLayout
+        android:id="@+id/add_todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+    >
+        <EditText
+            android:id="@+id/add_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Add new todo."
+            android:padding="12dp"
+            android:background="@drawable/rounded_bg_2" 
+	android:layout_marginEnd="10dp"
+	android:maxLines="1"
+        />
+
+        <ImageButton
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            android:padding="12dp"
+            android:background="@drawable/rounded_bg_2"
+	
+        />
+    </LinearLayout>
+</RelativeLayout>
